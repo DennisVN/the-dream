@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the-dream</title>
+    <style>
+    body {background-color:red;}
+    form {color:blue;}
+    p {color:blue;}
+</style>
 </head>
 <body style="font-family:courier;"><center>
     <form action="index.php" method="post" style ="height: 350px">
@@ -12,15 +17,17 @@
         <input type="text" style="font-size:1.5rem;" name="amount" placeholder="Enter Amount">
         <select style="font-size:1.5rem;" name="from">
             <option value="convert from">convert from</option>
-            <option value="MGA">MGA</option>
             <option value="EUR">EUR</option>
+            <option value="MGA">MGA</option>
+            <option value="EUR">MXN</option>
         </select>
         <select style="font-size:1.5rem;" name="to"> <p>convert to :</p>
             <option value="convert to">convert to</option>
             <option value="EUR">EUR</option>
             <option value="MGA">MGA</option>
-            <input type="submit" style="font-size:1.5rem;" name ="convert" >
+            <option value="EUR">MXN</option>
         </select>
+        <input type="submit" style="font-size:1.5rem;" name ="convert" >
     </form> </center>
 <?php
 
@@ -47,6 +54,21 @@ if (isset ($_POST ['convert']))
         echo "<br><center><b style='background: orange;'><font size='16rem'> $amount MGA = "; 
         echo "<br><center><b style='background: pink;'>  ";
         echo $amount / 4502;
+        echo " € ";
+        echo "</b></center>";
+    }
+    if ($from == 'EUR' AND $to == 'MXP') 
+    {
+        echo "<br><center><b style='background: orange;'><font size='16rem'> $amount EUR = "; 
+        echo "<br><center><b style='background: pink;'>  ";
+        echo $amount / 0.042;
+        echo " MXP ";
+        echo "</b></center>";
+    }
+    {
+        echo "<br><center><b style='background: orange;'><font size='16rem'> $amount MXN = "; 
+        echo "<br><center><b style='background: pink;'>  ";
+        echo $amount * 0.042;
         echo " € ";
         echo "</b></center>";
     }
