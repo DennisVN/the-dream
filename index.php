@@ -8,21 +8,19 @@
 </head>
 <body><center>
     <form action="index.php" method="post" style ="height: 350px">
-        <label for="query"> AMOUNT : </label> 
-        <input type="text" name="amount" placeholder="Enter Amount">
-        <input type="submit" name ="convert">
-        <select name="from">
+        <label for="query" style="font-size:1.5rem;"> AMOUNT : </label> 
+        <input type="text" style="font-size:1.5rem;" name="amount" placeholder="Enter Amount">
+        <input type="submit" style="font-size:1.5rem;" name ="convert">
+        <select style="font-size:1.5rem;" name="from">
             <option value="convert from">convert from</option>
             <option value="MGA">MGA</option>
             <option value="EUR">EUR</option>
         </select>
-        <select name="to"> <p>convert to :</p>
+        <select style="font-size:1.5rem;" name="to"> <p>convert to :</p>
             <option value="convert to">convert to</option>
             <option value="EUR">EUR</option>
             <option value="MGA">MGA</option>
         </select>
-        
-
     </form> </center>
 <?php
 
