@@ -6,29 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the-dream</title>
     <style>
-    body {background-color:red;}
-    form {color:blue;}
-    p {color:blue;}
+    .container {background-color: rgba(232, 236, 241, 1) ; opacity:0.6; bottom: 1rem; display:flex;}
+    form {color:black;  margin: 1.8rem;}
+    select { font-size: 15px}
+
 </style>
 </head>
 <body style="font-family:courier;"><center>
-    <form action="index.php" method="post" style ="height: 350px">
-        <label for="query" style="font-size:2rem;"> <b> AMOUNT </b>: </label> 
-        <input type="text" style="font-size:1.5rem;" name="amount" placeholder="Enter Amount">
-        <select style="font-size:1.5rem;" name="from">
-            <option value="convert from">convert from</option>
-            <option value="EUR">EUR</option>
-            <option value="MGA">MGA</option>
-            <option value="EUR">MXN</option>
-        </select>
-        <select style="font-size:1.5rem;" name="to"> <p>convert to :</p>
-            <option value="convert to">convert to</option>
-            <option value="EUR">EUR</option>
-            <option value="MGA">MGA</option>
-            <option value="EUR">MXN</option>
-        </select>
-        <input type="submit" style="font-size:1.5rem;" name ="convert" >
-    </form> </center>
+    <div class="container">
+        <form action="index.php" method="post" style ="height: 3rem">
+            <label for="query" style="font-size:2rem;"> <b> AMOUNT </b>: </label> 
+            <input type="text" style="font-size:1.5rem;" name="amount" placeholder="Enter Amount">
+            <select style="font-size:1.5rem;" name="from">
+                <option value="convert from">convert from</option>
+                <option value="EUR">EUR</option>
+                <option value="MGA">MGA</option>
+                <option value="EUR">MXN</option>
+            </select>
+            <select style="font-size:1.5rem;" name="to"> <p>convert to :</p>
+                <option value="convert to">convert to</option>
+                <option value="EUR">EUR</option>
+                <option value="MGA">MGA</option>
+                <option value="EUR">MXN</option>
+            </select>
+            <input type="submit" style="font-size:1.5rem;" name ="convert" >
+        </form> </center>
+    </div>
 <?php
 
 ini_set('display_errors', '1');
