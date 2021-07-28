@@ -6,11 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the-dream</title>
 </head>
-<body><center>
+<body style="font-family:courier;"><center>
     <form action="index.php" method="post" style ="height: 350px">
-        <label for="query" style="font-size:1.5rem;"> AMOUNT : </label> 
+        <label for="query" style="font-size:2rem;"> <b> AMOUNT </b>: </label> 
         <input type="text" style="font-size:1.5rem;" name="amount" placeholder="Enter Amount">
-        <input type="submit" style="font-size:1.5rem;" name ="convert">
         <select style="font-size:1.5rem;" name="from">
             <option value="convert from">convert from</option>
             <option value="MGA">MGA</option>
@@ -20,6 +19,7 @@
             <option value="convert to">convert to</option>
             <option value="EUR">EUR</option>
             <option value="MGA">MGA</option>
+            <input type="submit" style="font-size:1.5rem;" name ="convert" >
         </select>
     </form> </center>
 <?php
