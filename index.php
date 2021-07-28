@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>the-dream</title>
 </head>
-<body>
+<body><center>
     <form action="index.php" method="post">
         <label for="query"> AMOUNT : </label> 
         <input type="text" name="amount" placeholder="Enter Amount">
@@ -23,8 +23,9 @@
         </select>
         
 
-    </form>
+    </form> </center>
 <?php
+
 ini_set('display_errors', '1');
 ini_set('display_startup_errors', '1');
 error_reporting(E_ALL);
@@ -37,14 +38,18 @@ if (isset ($_POST ['convert']))
 
     if ($from == 'EUR' AND $to == 'MGA') 
     {
-        echo "<br><center><b style='background: pink;' Your balance is : >";
+        echo "<br><center><b style='background: orange;'> <font size='16rem'> $amount € = "; 
+        echo "<br><center><b style='background: pink;'> ";
         echo $amount * 4502;
+        echo " MGA ";
         echo "</b></center>";
     }
     if ($from == 'MGA' AND $to == 'EUR') 
     {
-        echo "<br><center><b style='background: pink;' Your balance is : >";
+        echo "<br><center><b style='background: orange;'><font size='16rem'> $amount MGA = "; 
+        echo "<br><center><b style='background: pink;'>  ";
         echo $amount / 4502;
+        echo " € ";
         echo "</b></center>";
     }
 }
