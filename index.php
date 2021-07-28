@@ -7,7 +7,7 @@
     <title>the-dream</title>
 </head>
 <body><center>
-    <form action="index.php" method="post">
+    <form action="index.php" method="post" style ="height: 350px">
         <label for="query"> AMOUNT : </label> 
         <input type="text" name="amount" placeholder="Enter Amount">
         <input type="submit" name ="convert">
@@ -38,7 +38,7 @@ if (isset ($_POST ['convert']))
 
     if ($from == 'EUR' AND $to == 'MGA') 
     {
-        echo "<br><center><b style='background: orange;'> <font size='16rem'> $amount € = "; 
+        echo "<br><center><b style='background: orange;'><font size='16rem'> $amount € = "; 
         echo "<br><center><b style='background: pink;'> ";
         echo $amount * 4502;
         echo " MGA ";
